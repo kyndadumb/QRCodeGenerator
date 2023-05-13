@@ -35,18 +35,18 @@ window.title("QR-Code Generator")
 window.geometry("500x400")
 
 # input-box
-input_label = tk.Label(window, text="Eingabedaten:")
+input_label = tk.Label(window, text="Input:")
 input_label.pack()
-input_entry = tk.Entry(window)
+input_entry = tk.Entry(window, width=50)
 input_entry.pack()
 
 # button: start qr-code generation
-generate_button = tk.Button(window, text="QR-Code generieren", command=generate_qr_code)
+generate_button = tk.Button(window, text="Generate QR-Code", command=generate_qr_code)
 generate_button.pack()
 
 # checkbox: save qr code image
 save_checkbox_var = tk.IntVar()
-save_checkbox = tk.Checkbutton(window, text="QR-Code speichern", variable=save_checkbox_var)
+save_checkbox = tk.Checkbutton(window, text="Save QR-Code as picture", variable=save_checkbox_var)
 save_checkbox.pack()
 
 # label for image
